@@ -1,0 +1,391 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+/*   ++++++++            M E N U        ++++++++       */
+
+/*Creamos el menu, dimenesiones, centrado de items*/
+.menu{
+
+    background-color:white;
+    position: fixed;
+    z-index: 1000;
+   
+    
+    display: flex;
+    justify-content: space-between;
+    padding-right: 15vw;
+
+
+    align-items: center;
+    height: 100px;
+    
+    width: 100%;
+
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+    
+}
+
+.logo{
+    
+    padding-right: 10vw;
+    text-decoration: none;
+    color: #137547;
+    font-size: 25px;
+    
+}
+
+#flor_1{
+    margin-left: 10px;
+}
+
+.logo2{
+
+   text-decoration: none; 
+   visibility: hidden;
+}
+
+
+/*Quitamos estilo predefinidos de la lista UL, damos espacios entre elemntos de la lista*/
+.nav ul {
+    
+    display: flex;
+    align-items: center;
+    gap: 4vw;
+    margin-top: 10px;
+    list-style-type: none;
+    
+}
+
+/* Hacemos los enlaces de color blanco y quitamos subrayado */
+.nav ul li a{
+    color: #137547;
+    text-decoration: none;
+}
+
+.item{
+    font-size: 20px;
+}
+
+/*Damos forma al exclusico socios*/
+.item3{
+
+    align-content: center;
+    text-align: center;
+
+    background-color:#137547;
+    width: 150px;
+    height:40px;
+    border-radius: 10px;
+
+    
+}
+
+/* Boton exclusivo socios*/
+
+.nav ul li.item3 a#boto {
+    color: white !important;
+}
+
+
+.abrir_menu, .cerrar_menu{
+    display: none;
+}
+
+/*  +++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+/*   +++++++++        I N I C I O    +++++++         */
+
+/* imagen principal*/
+.imagen_cabecera{
+    width: 100vw;
+    height: 50vw;
+
+    margin-top: 80px;
+}
+
+/* Texto descricpion */
+.texto{
+    
+    align-items: center;
+    text-align: center;
+    
+    font-size: 25px;
+    margin: 4vw 10vw 5vw 10vw;
+
+    color:black;
+    background-color: #a3b18a;
+    border-radius: 10px;
+    padding: 50px;
+    
+}
+
+/* texto prodcutos destacados*/
+.destacado{
+    font-size: 30px;
+    color: #137547;
+    text-align: center;
+    font-weight:500;
+}
+
+/* div pra la galeria */
+.contenedor_galeria{
+    display: flex;
+    justify-content:  center;
+    align-items: center;
+
+    margin-bottom: 5vw;
+    
+}
+
+.perso_galeria{
+    width: 40%;
+
+}
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+/* +++++++++++       C A T A L O G O        +++++++++++++ */
+
+.relleno{                   /*FORMULARIO*/
+    height: 120px;
+}
+
+.contenedor_texto2{        /*FORMULARIO*/                  
+    display: flex;
+    justify-content: center;
+   align-items: center;
+
+}
+
+.texto2{                /*FORMULARIO*/
+
+    font-size: 30px;
+    color: white;
+    text-align: center;
+    
+    width:fit-content;
+    
+    background-color: #718355;
+    border-radius: 100px;
+    box-sizing: border-box;
+    padding: 2vw 2vw 2vw 2vw;
+
+    margin-left: 3vw;
+    margin-right: 3vw;
+    margin-bottom: 3vw;
+}
+
+.tarjetas,.tarjetas2{
+    display: flex;
+    gap:5vw;
+    justify-content: center;
+
+    border-radius: 50px;
+    background: linear-gradient(to right, #a3b18a 3%, transparent 1%);
+
+    margin-bottom: 5vw;
+}
+
+.tarjetas2{
+    background: linear-gradient(to left, #a3b18a 3%, transparent 1%);
+    margin-bottom: 5vw;
+}
+
+.card{
+    width: 25vw;
+}
+
+
+.btn{
+    color: white;
+    background-color: #137547;
+}
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+/*  ++++++++++++     F O R M U L A R I O     ++++++++++++++*/
+
+.formulario {
+    
+    background-color: #718355;
+    color: white;
+
+    margin-right: 25vw;
+    margin-left: 25vw;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 20px;
+    padding: 2vw;
+    margin-bottom: 5vw;
+}
+
+.campo select, .campo textarea, .campo input{
+    width: 30vw;
+
+}
+
+.campo {
+    margin-bottom: 1vw;
+    
+}
+
+.campo label {
+    display: block;
+
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 5px;    
+}
+
+.texto_error{
+    font-style:none;
+    display: none;
+}
+
+.enviar {
+    
+    width: 100px;
+    height: 40px;
+    background-color: #137547;
+    color: white;
+
+    font-size: 16px;
+    font-weight: bold;
+
+
+    margin-top: 20px;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* +++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+@media screen and (max-width: 990px) {
+
+    .abrir_menu,.cerrar_menu{
+        display: block;
+        border:0;
+        font-size: 25px;
+        background-color: transparent;
+    }
+
+    .abrir_menu{
+        font-size: 30px;
+    }
+
+    .menu{
+        padding-left: 7vw;
+    }
+
+    .logo{
+        visibility:hidden;
+    }
+
+    .logo2{
+        position:absolute;
+        margin-left:10vw;
+        visibility: visible;
+        font-size: 35px;
+        color: #137547;
+    }
+
+    .nav {
+
+        opacity: 0;
+        visibility: hidden;
+        
+        display: flex;
+        flex-direction: column;
+
+
+        position:absolute;
+        top:0;
+        right: 0;
+        background-color: white;
+        align-items: center;
+        padding: 8vw 5vw 2vw 0vw;
+        border-radius: 20px;
+        box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav.visible{
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .nav ul{
+
+        flex-direction: column;
+        align-items: end;
+        
+    }
+
+    .texto{
+        font-size: 20px;
+    }
+
+    .destacado{
+        font-size: 25px;
+    }
+    
+    .carousel-caption h5{
+        font-size: 20px;
+    
+    }   
+  
+    .carousel-caption p{
+        font-size: 15px;
+    }
+
+    .tarjetas, .tarjetas2{
+        flex-direction: column;
+        align-items: center;
+        
+    }
+
+    .card{
+        width: 50vw;
+
+    }
+
+    .texto2{
+        font-size: 25px;
+    }
+
+}
+
+
+@media screen and (max-width: 500px){
+
+    .carousel-caption h5{
+        font-size: 14px;
+    
+    }   
+  
+    .carousel-caption p{
+        visibility: hidden;
+        font-size: 10px;
+    }
+
+    .campo textarea{
+        width: 43vw;
+        
+    }
+
+}
+

@@ -1,0 +1,25 @@
+{% extends 'core/base.html' %}
+
+{% block contenido %}
+<p class="relleno"></p>
+
+{% load crispy_forms_tags %}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <form method="post" class="p-4 border rounded bg-light shadow-sm">
+                {% csrf_token %}
+                <h2 class="text-center mb-4">Registro de Cuenta</h2>
+                
+                {{ form|crispy }}
+
+                <button type="submit" class="btn btn-primary w-100">Crear Cuenta</button>
+                <br>
+                <p class="text-center">¿Tienes cuenta? <a href="{% url 'login' %}">Inicia Sesión</a></p>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

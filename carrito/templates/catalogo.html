@@ -1,0 +1,35 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block contenido %}
+
+<p class="relleno"></p>
+
+<div class="contenedor_texto2 text-center">
+    <p class="texto2">¡ Conoce Nuestros Productos !</p>
+</div>
+
+<div class="row">
+    <div class="col-12 col-md-8">  <!-- Columna para los productos -->
+        <div class="row justify-content-center">  <!-- Centrar las tarjetas -->
+            {% for producto in productos %}
+            <div class="col-12 col-sm-6 mb-4">  <!-- Tarjetas ocupan la mitad en pantallas pequeñas y menos -->
+                <div class="card shadow-sm h-100">
+                    <img src="{{ producto.imagen.url }}" class="card-img-top" alt="{{ producto.nombre }}">  <!-- Añadir imagen -->
+                    <div class="card-body">
+                        <h5 class="card-title">{{ producto.nombre }}</h5>
+                        <p class="card-text">{{ producto.categoria }}</p>
+                        <p class="card-text font-weight-bold">${{ producto.precio }}</p>
+                        <a href="{% url 'add' producto.id %}" class="btn btn-primary">Añadir al carrito</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Incluir el carrito aquí como un div más -->
+    {% include 'carrito.html' %}
+</div>
+
+{% endblock %}

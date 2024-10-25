@@ -1,0 +1,61 @@
+{% extends 'core/base.html' %}
+
+{% block contenido %}
+
+<p class="relleno"></p>
+
+<div class="contenedor_texto2">
+    <p class="texto2"> ¡ Recicla Con Nosotros!</p>
+</div>
+
+
+<div class="formulario">
+    
+    <div class="campo">
+        <label for="principal">Tipo de Residuo</label>
+        <select name="principal" id="principal">
+            <option value="selecciona">Selecciona</option>
+            <option value="plastico">Plástico</option>
+            <option value="papel">Papel</option>
+            <option value="vidrio">Vidrio</option>
+            <option value="metales">Metales</option>
+            <option value="electronicos">Electrónicos</option>
+        </select>
+    </div>
+
+    <div class="campo">
+        <label for="subcategoria">Subcategoría</label>
+        <select name="sub" id="subcategoria">
+            <option value="selecciona">Selecciona</option>
+        </select>
+    </div>
+
+    <div class="campo">
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre">
+    </div>
+
+    <div class="campo">
+        <label for="correo">Correo Electrónico</label>
+        <input type="email" id="correo">
+    </div>
+
+    <div class="campo">
+        <label for="direccion">Dirección</label>
+        <input type="text" id="direccion">
+    </div>
+
+    <div class="campo">
+        <label for="comentarios">Comentarios Adicionales</label>
+        <textarea id="comentarios" rows="4"></textarea>
+    </div>
+
+
+    <div id="texto_error"></div> 
+
+    <button class="enviar" id="boton_enviar">Enviar</button>
+</div>
+
+{% endblock %}
+
+   

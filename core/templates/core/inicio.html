@@ -1,0 +1,66 @@
+
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block contenido %}
+
+
+<img class="imagen_cabecera" src="{% static 'imagenes/popo.jpg' %}">
+<p class="texto">Somos una pequeña empresa local dedicada a ofrecer productos ecológicos y sostenibles.
+    Nos esforzamos por promover el reciclaje y la conciencia ambiental. Con Nosotros ahora es más fácil ser sustentable
+</p>
+
+
+<p class="destacado">Productos Destacados </p>
+
+<div class="contenedor_galeria">
+
+    <div id="carouselExampleDark" class="carousel carousel-dark slide  perso_galeria">
+        
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+            <img src="{% static  'imagenes/cepillo.jpg' %}" class="d-block w-100" alt="...">
+            <div class="carousel-caption">
+            <h5>Cepillo de Dientes</h5>
+            <p>Hecho de bambú.</p>
+            </div>
+        </div>
+
+        <div class="carousel-item" data-bs-interval="2000">
+            <img src="{% static 'imagenes/jabon.webp' %}" class="d-block w-100" alt="...">
+            <div class="carousel-caption ">
+            <h5>Jabón Eco</h5>
+            <p>A partir de aceites vegetales.</p>
+            </div>
+        </div>
+
+        <div class="carousel-item">
+            <img src="{% static 'imagenes/piedra.webp'%}" class="d-block w-100" alt="...">
+            <div class="carousel-caption ">
+            <h5>Piedra Pome</h5>
+            <p>Con forma de corazón.</p>
+            </div>
+        </div>
+
+        </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    
+</div>
+
+{% endblock %}

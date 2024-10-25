@@ -1,0 +1,59 @@
+
+
+<div class="col-12 col-md-4 mt-5">  
+    <div class="alert alert-primary" role="alert">
+
+        <h5 class="text-center">Carrito</h5>
+
+        <div class="list-group">
+            {% if request.session.carrito %}
+                {% for key, value in request.session.carrito.items %}
+                    <div class="list-group-item d-flex justify-content-between align-items-center">
+                        <div>
+                            <strong>{{ value.nombre }}</strong><br>
+                            <span>Precio: ${{ value.acumulado }}</span><br>
+                            <span>Cantidad: {{ value.cantidad }}</span>
+                        </div>
+                        <div>
+                            <a href="{% url 'add' value.producto_id %}" class="btn btn-dark btn-sm">+</a>
+                            <a href="{% url 'sub' value.producto_id %}" class="btn btn-dark btn-sm">-</a>
+                            <a href="{% url 'del' value.producto_id %}" class="btn btn-danger btn-sm">Eliminar</a>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <div class="alert alert-danger text-center">Sin Productos</div>
+            {% endif %}
+        </div>
+
+        <hr>
+
+        <div class="d-flex justify-content-between">
+            <span><strong>Total del carrito:</strong> ${{ total_carrito }}</span>  
+        </div>
+        
+        {% if messages %}
+            <div class="container mt-3">
+                {% for message in messages %}
+                    <div class="alert alert-{{ message.tags }}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            </div>
+        {% endif %}
+
+        <hr>
+        <div class="row text-center">
+
+            <div class="col-6"><a href="{% url 'cls' %}" class="btn btn-danger">Limpiar</a></div>
+
+            <div class="col-6">
+                <form action="{% url 'guardar_orden' %}" method="POST">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-success">Guardar</button>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+</div>

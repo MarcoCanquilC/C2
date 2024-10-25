@@ -1,0 +1,36 @@
+{% extends 'core/base.html' %}
+
+{% block contenido %}
+<p class="relleno"></p>
+
+<div class="container">
+
+    <div class="row justify-content-center">
+        <div class="col-md-4">
+            <form method="post" action="{% url 'login' %}" class="p-4 border rounded bg-light shadow-sm">
+                {% csrf_token %}
+                <h2 class="text-center mb-4">Ingresar</h2>
+
+            
+                <!-- correo -->
+                <div class="mb-3">
+                    <label for="username" class="form-label">Correo Electrónico</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Correo Electrónico" required>
+                </div>
+
+                <!-- contraseña -->
+                <div class="mb-3">
+                    <label for="password" class="form-label">Contraseña</label>
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Contraseña" required>
+                </div>
+
+                <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+
+                <p class="text-center mt-3"><a href="#">¿Olvidaste tu contraseña?</a></p>
+                <p class="text-center">¿No tienes cuenta? <a href="{% url 'register' %}">Regístrate</a></p>
+            </form>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
